@@ -5,7 +5,7 @@ const cors = require("cors");
 const Contact = require("./models/contact");
 const app = express();
 
-app.use(express.static("build"));
+app.use(express.static("dist"));
 app.use(express.json());
 
 app.use(cors());
