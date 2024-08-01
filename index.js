@@ -10,8 +10,8 @@ app.use(express.json());
 
 app.use(cors());
 
-morgan.token("body", (req, res) => JSON.stringify(req.body));
-morgan.token("response-body", (req, res) => res.locals.responseBody || "");
+morgan.token("body", (req) => JSON.stringify(req.body));
+morgan.token("response-body", (res) => res.locals.responseBody || "");
 
 const responseLogger = (req, res, next) => {
   const originalSend = res.send;
